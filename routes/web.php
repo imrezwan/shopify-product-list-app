@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShopifyController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,7 +12,5 @@ Route::get('/shop', function () {
 })->middleware(['verify.shopify'])->name('shop');
 
 
-Route::get('/products', function () {
-    return view('products');
-})->middleware(['verify.shopify'])->name('products');
+Route::get('/products', [ShopifyController::class, 'getAllProducts'])->middleware(['verify.shopify'])->name('products');
 

@@ -20,7 +20,7 @@
         </a>
 
 
-        <a href="{{URL::tokenRoute('products') }} }}" style="
+        <a href="{{URL::tokenRoute('products') }}" style="
             display: inline-block;
             margin-top: 15px;
             padding: 8px 16px;
